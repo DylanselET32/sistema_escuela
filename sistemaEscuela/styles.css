@@ -1,0 +1,11 @@
+.contenedor{
+    background-color: red;
+}
+
+.parafo{
+ color: red;
+ background: blue;
+ width:5px ;
+ height: 5px;
+ margin: 2px;
+}

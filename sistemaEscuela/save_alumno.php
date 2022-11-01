@@ -8,9 +8,9 @@ if(isset($_POST['save_alumno'])){
     $año = $_POST['año'];
     $guardado = addAlumno($nombre, $apellido, $dni, $año);
     if($guardado){
-        echo "se guardo correctamente";
+        echo "se guardo correctamente" + $guardado;
     }else{
-        echo "Error al guardar los datos";
+        echo "Error al guardar los datos" + $guardado;
     }
 
     
