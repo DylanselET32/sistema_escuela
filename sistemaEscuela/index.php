@@ -14,9 +14,9 @@
     </div>
     -->
     <?php include("includes/tablaAlumnos.php")?>
-
+    <?php include("includes/formAlumno.php")?>
 </div>
 
-<?php include("includes/footer.php")?>
 
+<?php include("includes/footer.php")?>
 

@@ -8,35 +8,29 @@ if(!$conn){
     echo "Error de conexion con la base de datos";
 }
 
+//inciamos una sesion 
+
+session_start();
+
+
+
 function addAlumno($nombre,$apellido,$dni,$año){
     global $conn;
-    $query = "INSERT INTO alumno(nombre, apellido, dni, año) VALUES ('bbbb','aaaa',1234,1);";
+    $query = "insert into Alumno(nombre,apellido,dni,año) values('$nombre','$apellido',$dni,$año);";
     $result = mysqli_query($conn,$query);
     if(!$result){
-        return ("Error SQL" + $result);   
+        return "Error SQL" ;   
     }
-    
+
     return $result;
 }
 
-function prueba(){
-    global $conn;
-    $query = "INSERT INTO alumno(nombre, apellido, dni, año) VALUES ('bbbbaaaaa','aaaabbbbb',1234,1);";
-    $result = mysqli_query($conn,$query);
-    if(!$result){
-        return ("Error SQL" + $result);   
-    }
-    
-    return $result;
-}
 
 function deleteAlumnoById($id){
     global $conn;
     $query = "DELETE FROM `alumno` WHERE id = $id";
     $result = mysqli_query($conn,$query);
-    if(!$result){
-        return "Error SQL" ;   
-    }
+   
     return $result;
 }
 
@@ -50,7 +44,16 @@ function updateAlumno($id,$nombre,$apellido,$dni,$año){
     
     return $result;
 }
-
+function getAlumnoById($id){
+    global $conn;
+    $query = "select * from Alumno where id = $id";
+    $result = mysqli_query($conn,$query);
+    if(!$result){
+        return "Error SQL" ;   
+    }
+    
+    return $result;
+}
 function getAlumnoByDni($dni){
     global $conn;
     $query = "select * from Alumno where dni = $dni";

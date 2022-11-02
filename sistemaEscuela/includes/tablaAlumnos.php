@@ -24,8 +24,8 @@
                 <td><?php echo $row[4]?></td>
 
                 <td>
-                <button type="button" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
-                <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button>
+                <a type="button" href="includes/CRUD/editAlumno.php?id=<?php echo $row['id']?>" class="btn btn-warning" name="edit" ><i class="fa-solid fa-pen-to-square"></i></a>
+                <a type="button" href="includes/CRUD/deleteAlumno.php?id=<?php echo $row['id']?>" class="btn btn-danger" name="delete"><i class="fa-solid fa-trash"></i></a>
                 </td>
             </tr>
           <?php
