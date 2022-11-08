@@ -15,6 +15,6 @@ if(isset($_GET['id'])){
         $_SESSION["message_type"] = 'danger'; //El color del mensaje verde
     }
    
-    header("Location: ../../index.php");
+    header("Location: ../tablaALumnos.php");
 };
 ?>

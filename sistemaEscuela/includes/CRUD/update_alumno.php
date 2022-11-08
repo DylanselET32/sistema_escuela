@@ -18,7 +18,7 @@ if(isset($_POST['save_alumno'])){
         $_SESSION["message_type"] = 'danger'; //El color del mensaje verde
     }
    
-    header("Location:../../index.php");
+    header("Location:../tablaAlumnos.php");
     
 };
 ?>

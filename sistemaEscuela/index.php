@@ -1,21 +1,14 @@
 
-<?php include("db.php")?>
 <?php include("includes/header.php")?>
+<h2>BIENVENIDO A EL SISTEMA DE CALIFICACIONES</h2>
+<h3>Alumnos:</h3>
+<ul>
+    <li>Dylan Seltzer</li>
+    <li>Diego Sanchez</li>
+    <li>Gonzalo Gimenez</li>
+    <li>Agustin Barcia</li>
+</ul>
 
-<div class="container p-4 ">
-    <!--
-    <div class="row">
-        <div class="col-md-6">
-        <?php include("includes/formAlumno.php")?>
-        </div>
-        <div class="col-md-6">
-        <?php include("includes/formCalificacion.php")?>
-        </div>
-    </div>
-    -->
-    <?php include("includes/tablaAlumnos.php")?>
-    <?php include("includes/formAlumno.php")?>
-</div>
 
 
 <?php include("includes/footer.php")?>

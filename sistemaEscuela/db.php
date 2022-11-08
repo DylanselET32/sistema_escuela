@@ -106,10 +106,19 @@ function updateCalificacion($id,$nombre,$apellido,$dni,$año){
     
     return $result;
 }
-
-function getCalificacionByid($dni){
+function getAllCalificaciones(){
     global $conn;
-    $query = "select * from Alumno where dni = $dni";
+    $query = "select * from calificacion;";
+    $result = mysqli_query($conn,$query);
+    if(!$result){
+        return "Error SQL" ;   
+    }
+    
+    return $result;
+}
+function getCalificacionByid($id){
+    global $conn;
+    $query = "select * from calificacion where id = $id";
     $result = mysqli_query($conn,$query);
     if(!$result){
         return "Error SQL" ;   
@@ -118,5 +127,14 @@ function getCalificacionByid($dni){
     return $result;
 }
 
-
+function getAllCalificacionesWithAlumnos(){
+    global $conn;
+    $query = "SELECT * FROM alumno as a INNER JOIN calificacion as c ON a.id = c.id_alumno;";
+    $result = mysqli_query($conn,$query);
+    if(!$result){
+        return "Error SQL" ;   
+    }
+    
+    return $result;
+}
 ?>
